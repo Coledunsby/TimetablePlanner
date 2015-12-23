@@ -10,6 +10,8 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    // MARK: - View Lifecycle
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         

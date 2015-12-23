@@ -37,8 +37,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="cmL-bw-oKe"/>
                                         <exclude reference="9gl-vk-HeY"/>
+                                        <exclude reference="cmL-bw-oKe"/>
                                     </mask>
                                 </variation>
                             </imageView>

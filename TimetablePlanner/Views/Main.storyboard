@@ -408,7 +408,7 @@ v1.0.0</string>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="oYI-7f-uhU" kind="presentation" identifier="" id="QS8-4x-RPb"/>
+                                            <segue destination="oYI-7f-uhU" kind="presentation" identifier="AddCourse" id="QS8-4x-RPb"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="1lF-7G-tLT" detailTextLabel="nbo-bl-PcC" style="IBUITableViewCellStyleSubtitle" id="fiY-2b-1zs" customClass="TPTableViewCell" customModule="TimetablePlanner" customModuleProvider="target">

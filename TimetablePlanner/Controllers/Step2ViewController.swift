@@ -26,6 +26,9 @@ class Step2ViewController: UIViewController {
         if identifier == "ShowStep3" && GenerateManager.sharedManager.courses.count == 0 {
             presentViewController(UIAlertController.alert("Wait!", message: "You must select at least 1 course."), animated: true, completion: nil)
             return false
+        } else if identifier == "AddCourse" && GenerateManager.sharedManager.courses.count == 8 {
+            presentViewController(UIAlertController.alert("Limit Reached!", message: "You can only select up to 8 courses."), animated: true, completion: nil)
+            return false
         }
         return true
     }

@@ -29,7 +29,7 @@ class AddCoursesViewController: UITableViewController {
     
     // MARK: - IBActions
     
-    @IBAction func doneButtonTapped(sender: AnyObject) {
+    @IBAction func doneButtonTapped(sender: AnyObject?) {
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -65,6 +65,10 @@ class AddCoursesViewController: UITableViewController {
         hud.labelText = "Added \(course.code!)!"
         hud.userInteractionEnabled = false
         hud.hide(true, afterDelay: 0.5)
+        
+        if GenerateManager.sharedManager.courses.count == 8 {
+            doneButtonTapped(nil)
+        }
     }
     
 }
