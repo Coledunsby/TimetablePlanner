@@ -28,7 +28,7 @@ class GenerateManager: NSObject {
         
     }
     
-    func generateSchedulesInBackgroundWithBlock(block: ([TPTimetable], NSError?) -> Void) {
+    func generateTimetablesInBackgroundWithBlock(block: ([TPTimetable], NSError?) -> Void) {
         getSectionsInBackgroundWithBlock { (sections, error) -> Void in
             var courseCombinations = [[[TPTimeslot]]]()
             
@@ -84,7 +84,7 @@ class GenerateManager: NSObject {
                 timetables.append(timetable)
             }
             
-            // Remove Invalid Schedules (conflicts)
+            // Remove Invalid Timetables (conflicts)
             for timetable in timetables {
                 if !self.timetableIsValid(timetable) {
                     timetables.removeObject(timetable)

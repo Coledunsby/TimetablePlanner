@@ -24,7 +24,7 @@
 		ED27DB7F1C2B2EAC00473779 /* PFObject+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB5E1C2B2EAC00473779 /* PFObject+Additions.swift */; };
 		ED27DB801C2B2EAC00473779 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB5F1C2B2EAC00473779 /* String+Additions.swift */; };
 		ED27DB811C2B2EAC00473779 /* UIAlertController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB601C2B2EAC00473779 /* UIAlertController+Additions.swift */; };
-		ED27DB821C2B2EAC00473779 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB611C2B2EAC00473779 /* UIView+CornerRadius.swift */; };
+		ED27DB821C2B2EAC00473779 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB611C2B2EAC00473779 /* UIView+Additions.swift */; };
 		ED27DB831C2B2EAC00473779 /* GenerateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB621C2B2EAC00473779 /* GenerateManager.swift */; };
 		ED27DB851C2B2EAC00473779 /* TPCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB651C2B2EAC00473779 /* TPCourse.swift */; };
 		ED27DB861C2B2EAC00473779 /* TPSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB661C2B2EAC00473779 /* TPSection.swift */; };
@@ -61,7 +61,7 @@
 		ED27DB5E1C2B2EAC00473779 /* PFObject+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PFObject+Additions.swift"; sourceTree = "<group>"; };
 		ED27DB5F1C2B2EAC00473779 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		ED27DB601C2B2EAC00473779 /* UIAlertController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Additions.swift"; sourceTree = "<group>"; };
-		ED27DB611C2B2EAC00473779 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		ED27DB611C2B2EAC00473779 /* UIView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		ED27DB621C2B2EAC00473779 /* GenerateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateManager.swift; sourceTree = "<group>"; };
 		ED27DB631C2B2EAC00473779 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED27DB651C2B2EAC00473779 /* TPCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPCourse.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 				ED27DB5E1C2B2EAC00473779 /* PFObject+Additions.swift */,
 				ED27DB5F1C2B2EAC00473779 /* String+Additions.swift */,
 				ED27DB601C2B2EAC00473779 /* UIAlertController+Additions.swift */,
-				ED27DB611C2B2EAC00473779 /* UIView+CornerRadius.swift */,
+				ED27DB611C2B2EAC00473779 /* UIView+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				ED27DB811C2B2EAC00473779 /* UIAlertController+Additions.swift in Sources */,
 				ED27DB871C2B2EAC00473779 /* TPSession.swift in Sources */,
 				ED27DB721C2B2EAC00473779 /* AppDelegate.swift in Sources */,
-				ED27DB821C2B2EAC00473779 /* UIView+CornerRadius.swift in Sources */,
+				ED27DB821C2B2EAC00473779 /* UIView+Additions.swift in Sources */,
 				ED27DB8F1C2B2EAC00473779 /* TPTableViewCell.swift in Sources */,
 				ED27DB901C2B2EAC00473779 /* TPTimetableView.swift in Sources */,
 				ED27DB741C2B2EAC00473779 /* AddCoursesViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  UIView+CornerRadius.swift
+//  UIView+Additions.swift
 //  TimetablePlanner
 //
 //  Created by Cole Dunsby on 2015-12-13.
@@ -18,6 +18,20 @@ extension UIView {
             layer.cornerRadius = newValue
             layer.masksToBounds = newValue > 0
         }
+    }
+    
+    func createImage() -> UIImage {
+        UIGraphicsBeginImageContext(self.frame.size)
+        
+        let context = UIGraphicsGetCurrentContext()
+        
+        layer.renderInContext(context!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return image
     }
     
 }

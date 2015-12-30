@@ -23,16 +23,16 @@ class Step4ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        generateSchedules()
+        generateTimetables()
     }
     
     // MARK: - Private Functions
     
-    private func generateSchedules() {
+    private func generateTimetables() {
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
-        hud.labelText = "Generating Schedules"
+        hud.labelText = "Generating Timetables"
         
-        GenerateManager.sharedManager.generateSchedulesInBackgroundWithBlock { (timetables, error) -> Void in
+        GenerateManager.sharedManager.generateTimetablesInBackgroundWithBlock { (timetables, error) -> Void in
             hud.hide(true)
             
             self.timetables.appendContentsOf(timetables)
@@ -40,16 +40,16 @@ class Step4ViewController: UIViewController {
             self.statusLabel.hidden = false
             
             if self.timetables.count > 0 {
-                self.statusLabel.text = "Schedule 1/\(self.timetables.count):"
+                self.statusLabel.text = "Timetable 1/\(self.timetables.count):"
                 self.saveButton.hidden = false
-                self.loadSchedules()
+                self.loadTimetables()
             } else {
-                self.statusLabel.text = "No schedules found."
+                self.statusLabel.text = "No timetables found."
             }
         }
     }
     
-    private func loadSchedules() {
+    private func loadTimetables() {
         scrollView.contentSize = CGSize(width: view.frame.size.width * CGFloat(timetables.count), height: scrollView.frame.size.height)
         
         for var i = 0; i < timetables.count; i++ {
@@ -62,7 +62,7 @@ class Step4ViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
-        let alertController = UIAlertController(title: "Save Schedule", message: "What do you want to call it?", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Save Timetable", message: "What do you want to call it?", preferredStyle: .Alert)
         
         alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         
@@ -107,7 +107,7 @@ extension Step4ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let pageWidth = scrollView.frame.size.width
         index = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + CGFloat(1))
-        statusLabel.text = "Schedule \(index + 1)/\(timetables.count):"
+        statusLabel.text = "Timetable \(index + 1)/\(timetables.count):"
     }
     
 }
