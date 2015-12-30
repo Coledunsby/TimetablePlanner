@@ -36,16 +36,21 @@ class AddCoursesViewController: UITableViewController {
     // MARK: - UITableViewDataSource
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courses.count
+        return max(courses.count, 1)
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let course = courses[indexPath.row]
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        cell.textLabel?.text = course.code
-        cell.detailTextLabel?.text = course.name
-        return cell
+        if indexPath.row == 0 && courses.count == 0 {
+            let cellIdentifier = (searchBar.text?.trim().characters.count < 3) ? "CellEmpty" : "CellEmptySearch"
+            return tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+        } else {
+            let course = courses[indexPath.row]
+            
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+            cell.textLabel?.text = course.code
+            cell.detailTextLabel?.text = course.name
+            return cell
+        }
     }
     
     // MARK: - UITableViewDelegate

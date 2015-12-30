@@ -25,6 +25,8 @@
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Medium</string>
             <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
+            <string>AvenirNext-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -67,6 +69,66 @@
                                     <segue destination="YaE-9o-6xV" kind="show" id="0zg-Al-umY"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellEmpty" textLabel="6hb-Ez-63o" rowHeight="80" style="IBUITableViewCellStyleDefault" id="uhn-wr-0mO" customClass="TPTableViewCell" customModule="TimetablePlanner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="186" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uhn-wr-0mO" id="7DA-t5-b1t">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6hb-Ez-63o">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="79"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="You have no saved timetables :(">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.68888300657272339" green="0.71366006135940552" blue="0.73448425531387329" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Create one now!">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name="AvenirNext-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellEmptySearch" textLabel="456-lT-1LW" rowHeight="80" style="IBUITableViewCellStyleDefault" id="zNl-Jd-Qns" customClass="TPTableViewCell" customModule="TimetablePlanner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="266" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zNl-Jd-Qns" id="ua5-Wb-h0d">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="You have no timetables matching that name :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="456-lT-1LW">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="79"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                            <color key="textColor" red="0.68888300657272339" green="0.71366006135940552" blue="0.73448425531387329" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="H4D-V2-kGR" id="fxf-xG-DNP"/>
@@ -77,7 +139,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="ZJo-e6-bDb"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dSZ-I6-EdL">
                             <connections>
-                                <segue destination="mwd-TA-B7i" kind="presentation" id="UkT-8G-iab"/>
+                                <segue destination="mwd-TA-B7i" kind="presentation" identifier="NewTimetable" id="UkT-8G-iab"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -506,6 +568,49 @@ v1.0.0</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellEmpty" textLabel="chC-kS-w3f" style="IBUITableViewCellStyleDefault" id="9Fu-oY-qd9" customClass="TPTableViewCell" customModule="TimetablePlanner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="186" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Fu-oY-qd9" id="ti7-8z-RQK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="chC-kS-w3f">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="49"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Search for your courses by course code">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.68888300657272339" green="0.71366006135940552" blue="0.73448425531387329" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellEmptySearch" textLabel="NoF-Gh-Ja3" style="IBUITableViewCellStyleDefault" id="30M-Xv-Wq5" customClass="TPTableViewCell" customModule="TimetablePlanner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="236" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="30M-Xv-Wq5" id="lmi-CC-JzI">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="No courses with that course code :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NoF-Gh-Ja3">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="49"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <color key="textColor" red="0.68888300660000001" green="0.71366006140000005" blue="0.73448425530000006" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

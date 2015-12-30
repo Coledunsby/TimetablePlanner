@@ -57,19 +57,24 @@ class TimetablesViewController: UITableViewController {
     // MARK: - UITableViewDataSource
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return timetables.count
+        return max(timetables.count, 1)
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let timetable = timetables[indexPath.row]
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        cell.textLabel?.text = timetable.name
-        return cell
+        if indexPath.row == 0 && timetables.count == 0 {
+            let cellIdentifier = (searchBar.text == "") ? "CellEmpty" : "CellEmptySearch"
+            return tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+        } else {
+            let timetable = timetables[indexPath.row]
+            
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+            cell.textLabel?.text = timetable.name
+            return cell
+        }
     }
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+        return !(indexPath.row == 0 && timetables.count == 0)
     }
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -78,6 +83,20 @@ class TimetablesViewController: UITableViewController {
             timetables.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if indexPath.row == 0 && timetables.count == 0 && searchBar.text == "" {
+            performSegueWithIdentifier("NewTimetable", sender: self)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return (indexPath.row == 0 && timetables.count == 0) ? 80.0 : 50.0
     }
 
     // MARK: - Navigation
