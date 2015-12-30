@@ -81,6 +81,8 @@ class AddCoursesViewController: UITableViewController {
 extension AddCoursesViewController: UISearchBarDelegate {
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        searchBar.text = searchText.uppercaseString
+        
         if searchText.trim().characters.count >= 3 {
             if let query = TPCourse.query() {
                 query.whereKey("sessions", equalTo: GenerateManager.sharedManager.session!.identifier!)
