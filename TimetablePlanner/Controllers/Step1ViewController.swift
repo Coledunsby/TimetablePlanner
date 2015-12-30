@@ -65,6 +65,10 @@ extension Step1ViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Select a session:"
+    }
+    
 }
 
 // MARK: - UITableViewDelegate

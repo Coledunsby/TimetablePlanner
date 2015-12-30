@@ -69,6 +69,10 @@ extension Step2ViewController: UITableViewDataSource {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "Select your courses:" : nil
+    }
 
 }
 
