@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Parse
         ParseCrashReporting.enable()
-        Parse.setApplicationId("SRQ1XUWQSIMREQClucMJXTzv0fR4ustN5ktA1ZHW", clientKey: "cUmWEteHyHghrYMXBNRpD6ZvofFGTHuaDVU7JuXy")
+        Parse.setApplicationId(PARSE_APPLICATION_ID, clientKey: PARSE_CLIENT_KEY)
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         

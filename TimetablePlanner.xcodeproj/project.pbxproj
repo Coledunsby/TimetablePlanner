@@ -38,6 +38,7 @@
 		ED27DB8E1C2B2EAC00473779 /* TPProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB6F1C2B2EAC00473779 /* TPProgressView.swift */; };
 		ED27DB8F1C2B2EAC00473779 /* TPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB701C2B2EAC00473779 /* TPTableViewCell.swift */; };
 		ED27DB901C2B2EAC00473779 /* TPTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DB711C2B2EAC00473779 /* TPTimetableView.swift */; };
+		ED6907421C4A9E0600ED2E88 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6907411C4A9E0600ED2E88 /* Credentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		ED27DB6F1C2B2EAC00473779 /* TPProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPProgressView.swift; sourceTree = "<group>"; };
 		ED27DB701C2B2EAC00473779 /* TPTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPTableViewCell.swift; sourceTree = "<group>"; };
 		ED27DB711C2B2EAC00473779 /* TPTimetableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPTimetableView.swift; sourceTree = "<group>"; };
+		ED6907411C4A9E0600ED2E88 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		ED27DB3C1C2B2E5400473779 /* TimetablePlanner */ = {
 			isa = PBXGroup;
 			children = (
+				ED6907411C4A9E0600ED2E88 /* Credentials.swift */,
 				ED27DB4F1C2B2EAC00473779 /* AppDelegate.swift */,
 				ED27DB621C2B2EAC00473779 /* GenerateManager.swift */,
 				ED27DB5C1C2B2EAC00473779 /* Extensions */,
@@ -339,6 +342,7 @@
 				ED27DB771C2B2EAC00473779 /* Step1ViewController.swift in Sources */,
 				ED27DB8A1C2B2EAC00473779 /* TPUser.swift in Sources */,
 				ED27DB7E1C2B2EAC00473779 /* Array+Additions.swift in Sources */,
+				ED6907421C4A9E0600ED2E88 /* Credentials.swift in Sources */,
 				ED27DB8E1C2B2EAC00473779 /* TPProgressView.swift in Sources */,
 				ED27DB7C1C2B2EAC00473779 /* TimetablesViewController.swift in Sources */,
 				ED27DB7F1C2B2EAC00473779 /* PFObject+Additions.swift in Sources */,
